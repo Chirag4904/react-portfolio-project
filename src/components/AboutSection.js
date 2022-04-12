@@ -6,11 +6,6 @@ import { About, Description, Image, Hide } from "../styles";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
 const AboutSection = () => {
-	// const titleAnim = {
-	// 	hidden: { opacity: 0 },
-	// 	show: { opacity: [1, 0, 1], transition: { duration: 2 } },
-	// };
-
 	return (
 		<About>
 			<Description>
