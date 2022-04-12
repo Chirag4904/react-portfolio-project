@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { useNavigate, useLocation } from "react-router-dom";
 import { MovieState } from "../movieState";
 
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
+
 const MovieDetail = () => {
 	// let navigate = useNavigate();
 	const location = useLocation();
@@ -16,11 +19,15 @@ const MovieDetail = () => {
 		const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
 		setMovie(currentMovie[0]);
 	}, [movies, url]);
-	console.log(movie);
 	return (
 		<>
 			{movie && (
-				<Details>
+				<Details
+					variants={pageAnimation}
+					initial="hidden"
+					animate="show"
+					exit="exit"
+				>
 					<Headline>
 						<h2>{movie.title}</h2>
 						<img src={movie.mainImg} alt="" />
@@ -43,7 +50,7 @@ const MovieDetail = () => {
 	);
 };
 
-const Details = styled.div``;
+const Details = styled(motion.div)``;
 
 const Headline = styled.div`
 	min-height: 90vh;
