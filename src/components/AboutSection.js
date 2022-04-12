@@ -35,6 +35,8 @@ const AboutSection = () => {
 			</Description>
 			<Image>
 				<motion.img variants={photoAnim} src={home1} alt="guy with cam" />
+				{/* //i can add initial and animate to any child for which i dont want
+				staggering */}
 			</Image>
 			<Wave />
 		</About>
