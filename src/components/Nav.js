@@ -38,6 +38,22 @@ const StyledNav = styled.nav`
 	z-index: 10;
 	top: 0;
 
+	@media (max-width: 1050px) {
+		padding: 1rem 0rem;
+		flex-direction: column;
+
+		#logo {
+		}
+		ul {
+			padding: 2rem;
+			justify-content: space-around;
+			width: 100%;
+			li {
+				padding: 0;
+			}
+		}
+	}
+
 	a {
 		color: white;
 		text-decoration: none;

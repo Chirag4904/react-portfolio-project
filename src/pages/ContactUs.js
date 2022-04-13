@@ -38,6 +38,10 @@ const ContactStyle = styled(motion.div)`
 	padding: 5rem 10rem;
 	color: #353535;
 	min-height: 90vh;
+	@media (max-width: 1050px) {
+		padding: 2rem 1rem;
+		overflow: hidden;
+	}
 `;
 
 const Title = styled.div`
